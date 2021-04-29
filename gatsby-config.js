@@ -12,6 +12,15 @@ module.exports = {
     },
   },
   plugins: [
+    {
+      resolve: `gatsby-plugin-google-tagmanager`,
+      options: {
+        id: `GTM-5TPCCJ4`,
+        includeInDevelopment: true,
+        defaultDataLayer: { platform: `gatsby`},
+        
+      },
+    },
     `gatsby-plugin-image`,
     {
       resolve: `gatsby-source-filesystem`,
