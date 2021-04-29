@@ -47,7 +47,7 @@ const Bio = () => {
           Written by <strong>{author.name}</strong> {author?.summary || null}
           {` `}
           <a href={`https://instagram.com/${social?.instagram || ``}`}>
-            You should follow them on Instagram.
+            You should follow him on Instagram.
           </a>
         </p>
       )}
