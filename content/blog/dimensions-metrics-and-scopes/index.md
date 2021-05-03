@@ -4,7 +4,7 @@ date: "2019-03-27"
 description: "Back to the basics."
 ---
 
-![Blackhole](./blackhole.png)
+![Space](./space.png)
 
 We’re going back to the basics on this one. Let me be clear: when I say “basics,” I don’t mean you should already know this. Rather, in the “I told you that story so I could tell you this one,” I want to address the former story. Understanding dimensions and metrics is fundamental to more interesting discussions down the road.
 
@@ -67,4 +67,4 @@ A session is everything in a single, unbroken visit to your site. The hidden in 
 
 Finally, a user is one particular machine accessing the site via the same browser. GA works behind the scenes to link users across sessions, which is how we have reporting on new versus returning users. User ID is GA’s anonymous user-scoped dimension that helps stitch sessions together into a broader story. We frequently follow GA’s example by setting up user-scoped custom dimensions leveraging Member IDs from a login database, which allows us to perform our own user level analysis later.
 
-Custom dimensions are a story for another time. At this point, my hope is that you understand dimensions, metrics, and scopes more clearly, and I hope that you can use this understanding to have better discussions with your teams and clients down the road. 
+Custom dimensions are a story for another time. At this point, my hope is that you understand dimensions, metrics, and scopes more clearly, and I hope that you can use this understanding to have better discussions with your teams and clients down the road.
