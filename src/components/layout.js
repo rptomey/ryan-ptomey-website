@@ -1,9 +1,17 @@
 import * as React from "react"
+import "./layout.css"
 import { Link } from "gatsby"
+import { StaticImage } from "gatsby-plugin-image"
 
 const ListLink = props => (
   <li style={{display: `inline-block`, marginRight: `1rem` }}>
     <Link to={props.to}>{props.children}</Link>
+  </li>
+)
+
+const SideLink = props => (
+  <li style={{ marginRight: `1rem` }}>
+    <Link to={props.to} style={{ textShadow: `none` }}>{props.children}</Link>
   </li>
 )
 
@@ -37,6 +45,23 @@ const Layout = ({ location, title, children }) => {
         {header}
       </header>
       <main>{children}</main>
+      <nav class="sidenav">
+        <Link to="/">
+          <StaticImage
+            className="about-picture"
+            layout="constrained"
+            formats={["AUTO", "WEBP", "AVIF"]}
+            src="../images/warp.png"
+            quality={95}
+            alt="WARP logo"
+          />
+        </Link>
+        <ul style={{ listStyle: `none`}}>
+          <SideLink to="/">Home</SideLink>
+          <SideLink to="/resources/">Resources</SideLink>
+          <SideLink to="/about/">About</SideLink>
+        </ul>
+      </nav>
       <footer>
         © {new Date().getFullYear()}, Built with
         {` `}
