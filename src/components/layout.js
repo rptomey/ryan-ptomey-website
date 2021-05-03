@@ -62,7 +62,7 @@ const Layout = ({ location, title, children }) => {
           <SideLink to="/about/">About</SideLink>
         </ul>
       </nav>
-      <footer>
+      <footer className="global-footer">
         © {new Date().getFullYear()}, Built with
         {` `}
         <a href="https://www.gatsbyjs.com">Gatsby</a>

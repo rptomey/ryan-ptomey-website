@@ -13,6 +13,7 @@ nav.sidenav {
   background-color: #0c4c93;
 }
 
+
 nav.sidenav a {
   color: #ffffff;
 }
@@ -22,9 +23,10 @@ main {
   position: absolute;
   padding-left: 2rem;
   padding-right: 1rem;
+  padding-bottom: 2.5rem;
 }
 
-footer {
+footer.global-footer {
   background-color: #000000;
   position: fixed;
   left: 0;
