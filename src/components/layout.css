@@ -16,3 +16,12 @@ nav.sidenav {
 nav.sidenav a {
   color: #ffffff;
 }
+
+footer {
+  background-color: #000000;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 2.5rem;
+  padding: .5rem;
+}
