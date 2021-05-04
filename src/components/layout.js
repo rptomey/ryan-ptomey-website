@@ -1,5 +1,4 @@
 import * as React from "react"
-import "./layout.css"
 import { Link } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
 
@@ -23,26 +22,36 @@ const Layout = ({ location, title, children }) => {
   if (isRootPath) {
     header = (
       <h1 className="main-heading">
-        <Link to="/">{title}</Link>
+        Hello!
       </h1>
     )
-  } else {
+  }
+  else if (/\/(resources|about)\/$/.test(location.pathname)) {
+    header = (
+      <h1 className="main-heading">
+        {title}
+      </h1>
+    )
+  }
+  /*
+  else {
     header = (
       <Link className="header-link-home" to="/">
         {title}
       </Link>
     )
   }
+  */
 
   return (
     <div className="global-wrapper" data-is-root-path={isRootPath}>
       <header className="global-header">
-      <ul style={{ listStyle: `none`, float: `right` }}>
-        <ListLink to="/">Home</ListLink>
-        <ListLink to="/resources/">Resources</ListLink>
-        <ListLink to="/about/">About</ListLink>
-      </ul>
         {header}
+      <ul style={{ listStyle: `none`, float: `right` }}>
+        <ListLink to="/blog/">Blog</ListLink>
+        <ListLink to="/portfolio/">Portfolio</ListLink>
+        {/* <ListLink to="/resume/">Resume</ListLink> */}
+      </ul>
       </header>
       <main>{children}</main>
       <nav class="sidenav">

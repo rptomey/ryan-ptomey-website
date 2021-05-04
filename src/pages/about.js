@@ -8,7 +8,7 @@ import { StaticImage } from "gatsby-plugin-image"
 export default function About({ data, location}) {
   const siteTitle = data.site.siteMetadata?.title || `Title`
   return (
-    <Layout location={location} title={siteTitle}>
+    <Layout location={location} title="About">
       <Seo title="About" />
       <Bio />
       <StaticImage

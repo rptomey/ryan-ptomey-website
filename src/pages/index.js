@@ -11,11 +11,12 @@ const BlogIndex = ({ data, location }) => {
 
   return (
     <Layout location={location} title={siteTitle}>
-      <Seo title="All posts" />
+      <Seo title="Homepage" />
       <Bio />
       <ol style={{ listStyle: `none` }}>
         {posts.map(post => {
           const title = post.frontmatter.title || post.fields.slug
+          const blogPath = "/blog" + post.fields.slug
 
           return (
             <li key={post.fields.slug}>
@@ -26,7 +27,7 @@ const BlogIndex = ({ data, location }) => {
               >
                 <header>
                   <h2>
-                    <Link to={post.fields.slug} itemProp="url">
+                    <Link to={blogPath} itemProp="url">
                       <span itemProp="headline">{title}</span>
                     </Link>
                   </h2>

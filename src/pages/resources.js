@@ -16,7 +16,7 @@ const Resource = props => (
 export default function Resources({ data, location}) {
   const siteTitle = data.site.siteMetadata?.title || `Title`
   return (
-    <Layout location={location} title={siteTitle}>
+    <Layout location={location} title="Resources">
       <Seo title="Resources" />
       <Bio />
       <p>
