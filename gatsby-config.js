@@ -18,7 +18,7 @@ module.exports = {
         id: `GTM-5TPCCJ4`,
         includeInDevelopment: true,
         defaultDataLayer: { platform: `gatsby`},
-        
+
       },
     },
     `gatsby-plugin-image`,
@@ -27,6 +27,13 @@ module.exports = {
       options: {
         path: `${__dirname}/content/blog`,
         name: `blog`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/content/portfolio`,
+        name: `portfolio`,
       },
     },
     {
@@ -60,12 +67,6 @@ module.exports = {
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
-    // {
-    //   resolve: `gatsby-plugin-google-analytics`,
-    //   options: {
-    //     trackingId: `ADD YOUR TRACKING ID HERE`,
-    //   },
-    // },
     {
       resolve: `gatsby-plugin-feed`,
       options: {

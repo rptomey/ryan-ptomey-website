@@ -5,7 +5,7 @@ import Bio from "../components/bio"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 
-const Home = ({ data, location }) => {
+const BlogIndex = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`
   const posts = data.allMarkdownRemark.nodes
 
@@ -13,7 +13,6 @@ const Home = ({ data, location }) => {
     <Layout location={location} title={siteTitle}>
       <Seo title="Homepage" />
       <Bio />
-      <h1> All Content</h1>
       <ol style={{ listStyle: `none` }}>
         {posts.map(post => {
           const title = post.frontmatter.title || post.fields.slug
@@ -51,7 +50,7 @@ const Home = ({ data, location }) => {
   )
 }
 
-export default Home
+export default BlogIndex
 
 export const pageQuery = graphql`
   query {

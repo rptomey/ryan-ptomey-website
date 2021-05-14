@@ -5,7 +5,7 @@ import Bio from "../components/bio"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 
-const BlogPostTemplate = ({ data, location }) => {
+const PortfolioTemplate = ({ data, location }) => {
   const post = data.markdownRemark
   const siteTitle = data.site.siteMetadata?.title || `Title`
   const { previous, next } = data
@@ -40,10 +40,10 @@ const BlogPostTemplate = ({ data, location }) => {
   )
 }
 
-export default BlogPostTemplate
+export default PortfolioTemplate
 
 export const pageQuery = graphql`
-  query BlogPostBySlug(
+  query PortfolioPostBySlug(
     $id: String!
     $previousPostId: String
     $nextPostId: String

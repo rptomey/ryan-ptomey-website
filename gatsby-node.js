@@ -1,24 +1,66 @@
 const path = require(`path`)
 const { createFilePath } = require(`gatsby-source-filesystem`)
 
+exports.onCreateNode = ({ node, actions, getNode }) => {
+  const { createNodeField } = actions
+
+  if (node.internal.type === `MarkdownRemark` && node.fileAbsolutePath.includes(`content/blog`)) {
+    const value = createFilePath({ node, getNode })
+
+    createNodeField({
+      name: `slug`,
+      node,
+      value: `/blog${value}`,
+    })
+  }
+
+  if (node.internal.type === `MarkdownRemark` && node.fileAbsolutePath.includes(`content/portfolio`)) {
+    const value = createFilePath({ node, getNode })
+
+    createNodeField({
+      name: `slug`,
+      node,
+      value: `/portfolio${value}`,
+    })
+  }
+}
+
 exports.createPages = async ({ graphql, actions, reporter }) => {
   const { createPage } = actions
 
-  // Define a template for blog post
-  const blogPost = path.resolve(`./src/templates/blog-post.js`)
+  // Define template for blog posts and portfolio pages
+  const blogPostTemplate = path.resolve(`./src/templates/blog-post.js`)
+  const portfolioTemplate = path.resolve(`./src/templates/portfolio.js`)
 
-  // Get all markdown blog posts sorted by date
+  // Get all markdown files
   const result = await graphql(
     `
-      {
-        allMarkdownRemark(
-          sort: { fields: [frontmatter___date], order: ASC }
+      query {
+        blogs: allMarkdownRemark (
+          sort: { fields: [frontmatter___date], order: DESC}
           limit: 1000
+          filter: { fileAbsolutePath: { regex: "/content/blog/" } }
         ) {
-          nodes {
-            id
-            fields {
-              slug
+          edges {
+            node {
+              id
+              fields {
+                slug
+              }
+            }
+          }
+        }
+        portfolios: allMarkdownRemark (
+          sort: { fields: [frontmatter___date], order: DESC}
+          limit: 1000
+          filter: { fileAbsolutePath: { regex: "/content/portfolio/" } }
+        ) {
+          edges {
+            node {
+              id
+              fields {
+                slug
+              }
             }
           }
         }
@@ -28,48 +70,31 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
 
   if (result.errors) {
     reporter.panicOnBuild(
-      `There was an error loading your blog posts`,
+      `ERROR: Loading "createPages" query.`,
       result.errors
     )
     return
   }
 
-  const posts = result.data.allMarkdownRemark.nodes
+  const blogs = result.data.blogs.edges
+  const portfolios = result.data.portfolios.edges
 
-  // Create blog posts pages
-  // But only if there's at least one markdown file found at "content/blog" (defined in gatsby-config.js)
-  // `context` is available in the template as a prop and as a variable in GraphQL
+  blogs.forEach(({ node }) => {
 
-  if (posts.length > 0) {
-    posts.forEach((post, index) => {
-      const previousPostId = index === 0 ? null : posts[index - 1].id
-      const nextPostId = index === posts.length - 1 ? null : posts[index + 1].id
-
-      createPage({
-        path: `/blog` + post.fields.slug,
-        component: blogPost,
-        context: {
-          id: post.id,
-          previousPostId,
-          nextPostId,
-        },
-      })
+    createPage({
+      path: node.fields.slug,
+      component: blogPostTemplate,
+      context: { id: node.id },
     })
-  }
-}
+  })
 
-exports.onCreateNode = ({ node, actions, getNode }) => {
-  const { createNodeField } = actions
-
-  if (node.internal.type === `MarkdownRemark`) {
-    const value = createFilePath({ node, getNode })
-
-    createNodeField({
-      name: `slug`,
-      node,
-      value,
+  portfolios.forEach(({ node }) => {
+    createPage({
+      path: node.fields.slug,
+      component: portfolioTemplate,
+      context: { id: node.id },
     })
-  }
+  })
 }
 
 exports.createSchemaCustomization = ({ actions }) => {
