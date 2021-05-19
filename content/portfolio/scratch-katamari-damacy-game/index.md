@@ -18,7 +18,7 @@ The very first week of Harvard's [cs50x course](https://cs50.harvard.edu/x/2021/
 
 <iframe src="https://scratch.mit.edu/projects/528029760/embed" allowtransparency="true" width="485" height="402" frameborder="0" scrolling="no" allowfullscreen></iframe>
 
-### Notes and Credits
+## Notes and Credits
 Big thanks to Namco for giving the world the weird, delightful series that is Katamari Damacy. If you haven't had the opportunity to play one of the games, please treat yourself!
 
 ## Project Details and Discussion

@@ -148,7 +148,7 @@ bool checkLuhn(string z, int q)
 }
 ```
 
-### Notes and Credits
+## Notes and Credits
 I'm indebted to StackOverflow for helping me figure out how to change a long to a string, then how to convert a single number stored as a character back into an integer.
 
 I also am thankful to my Discord server for helping me catch an error in my understanding of the algorithm. Originally, I thought that the doubled numbers merely had to be added to the checksum, but instead, it is their digits that should be added. For example, 7 doubled should be added as `+ 1 + 4` instead of `+ 14`.
