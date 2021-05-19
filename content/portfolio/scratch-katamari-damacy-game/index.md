@@ -36,3 +36,6 @@ Text costumes:
 
 Background code:
 ![Background source code](./background.png)
+
+Soundtrack:
+![Soundtrack files](./soundtrack.png)
