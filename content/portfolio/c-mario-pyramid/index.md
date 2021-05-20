@@ -1,7 +1,7 @@
 ---
 title: cs50x Coursework - Mario Pyramids in C
 date: "2021-05-19"
-description: "Code written in C to validate credit cards using Luhn's algorithm, then detect Visa, Mastercard, or AmEx numbers."
+description: "Code written in C to build a pyramid out of text characters, based on World 1-1 of Super Mario Bros."
 ---
 ## Project Abstract
 The second week of Harvard's [cs50x course](https://cs50.harvard.edu/x/2021/) asks students to start working in actual, written code using C. Students were given two homework assignments, each with two levels of difficulty to pick from.
