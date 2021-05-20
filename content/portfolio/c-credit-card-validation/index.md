@@ -12,6 +12,7 @@ Assignment 2's harder option was to write a code that would accept credit card n
 * Visa cards begin with 4, Mastercard with 51 through 55, and AmEx with either 34 or 37.
 
 ## Project Deliverable
+
 ```c
 #include <stdio.h>
 #include <cs50.h>
@@ -156,6 +157,9 @@ I also am thankful to my Discord server for helping me catch an error in my unde
 ## Project Details and Discussion
 Having done some more research and talked to some folks with more experience in C, I have learned that I probably could have made things easier on myself by leveraging more modular division and using log10 to get the length; however, I initially had a clearer idea of how to approach the problem using strings and arrays.
 
-since this was a an assignment for a class, it felt more academically honest to push through with my original idea. Unfortunately, I also learned through this project that strings aren't very easy to work with in C.
+Since this was a an assignment for a class, it felt more academically honest to push through with my original idea. Unfortunately, I also learned through this project that strings aren't very easy to work with in C.
 
 If I had to re-write it for efficiency, I would definitely change my approach. But since we'll be moving onto other assignments in the coming weeks, I don't expect to return to this - unless approaching it in a more modern language.
+
+Because this project leveraged the `cs50.h` header file, which is not available outside of the program's online IDE, [JDoodle](https://www.jdoodle.com/) was not able to compile the code, so I can't embed a working example here. However, here is an example of the input and output:
+[Credit terminal examples](./credit-terminal.png)
