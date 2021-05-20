@@ -7,7 +7,7 @@ description: "Code written in C to build a pyramid out of text characters, based
 The second week of Harvard's [cs50x course](https://cs50.harvard.edu/x/2021/) asks students to start working in actual, written code using C. Students were given two homework assignments, each with two levels of difficulty to pick from.
 
 Assignment 1's harder option was to write a code that would accept an integer input between 1 and 8, then generate a pyramid of that height, based on the pyramid seen in World 1-1 of Super Mario Bros. (NES).
-[Mario pyramid](./mario-pyramid.png)
+![Mario pyramid](./mario-pyramid.png)
 
 As seen in the game, a pyramid with a height of 4 would have a base level of 4 blocks, 2 empty spaces, and 4 more blocks. Each ascending row decreases the number of blocks on each sides of the gap by 1. Regardless of height, the 2 space gap should be a constant feature.
 
@@ -66,4 +66,4 @@ I was happy with myself for realizing that I could just use one `makeBlocks` fun
 One item I could have explored is whether it would have been better to pass characters to the function instead of single character strings, but this is working as expected and is a pretty small program, so I would have to imagine any difference is negligible.
 
 Because this project leveraged the `cs50.h` header file, which is not available outside of the program's online IDE, [JDoodle](https://www.jdoodle.com/) was not able to compile the code, so I can't embed a working example here. However, here is an example of the input and output:
-[Mario terminal examples](./mario-terminal.png)
+![Mario terminal examples](./mario-terminal.png)

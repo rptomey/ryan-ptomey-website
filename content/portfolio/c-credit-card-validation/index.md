@@ -162,4 +162,4 @@ Since this was a an assignment for a class, it felt more academically honest to 
 If I had to re-write it for efficiency, I would definitely change my approach. But since we'll be moving onto other assignments in the coming weeks, I don't expect to return to this - unless approaching it in a more modern language.
 
 Because this project leveraged the `cs50.h` header file, which is not available outside of the program's online IDE, [JDoodle](https://www.jdoodle.com/) was not able to compile the code, so I can't embed a working example here. However, here is an example of the input and output:
-[Credit terminal examples](./credit-terminal.png)
+![Credit terminal examples](./credit-terminal.png)
