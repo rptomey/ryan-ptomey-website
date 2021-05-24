@@ -26,7 +26,7 @@ const Layout = ({ location, title, children }) => {
       </h1>
     )
   }
-  else if (/\/(resources|about)\/$/.test(location.pathname)) {
+  else if (/\/(resources|about|portfolio|blog)\/$/.test(location.pathname)) {
     header = (
       <h1 className="main-heading">
         {title}

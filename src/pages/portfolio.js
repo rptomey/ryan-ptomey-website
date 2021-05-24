@@ -10,9 +10,10 @@ const BlogIndex = ({ data, location }) => {
   const posts = data.allMarkdownRemark.nodes
 
   return (
-    <Layout location={location} title={siteTitle}>
+    <Layout location={location} title="Portfolio">
       <Seo title="Homepage" />
       <Bio />
+      <h1>All Portfolio Projects</h1>
       <ol style={{ listStyle: `none` }}>
         {posts.map(post => {
           const title = post.frontmatter.title || post.fields.slug
