@@ -101,7 +101,7 @@ query {
       title
     }
   }
-  blogPosts: allMarkdownRemark(
+  portfolioProjects: allMarkdownRemark(
     filter: {fields: {slug: {regex: "/portfolio/"}}}
     sort: {fields: frontmatter___date, order: DESC}
     limit: 3
@@ -118,7 +118,7 @@ query {
       }
     }
   }
-  portfolioProjects: allMarkdownRemark(
+  blogPosts: allMarkdownRemark(
     filter: {fields: {slug: {regex: "/blog/"}}}
     sort: {fields: frontmatter___date, order: DESC}
     limit: 3
