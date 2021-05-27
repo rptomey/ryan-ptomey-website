@@ -3,7 +3,7 @@ import { Link } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
 
 const ListLink = props => (
-  <li style={{display: `inline-block`, marginRight: `1rem` }}>
+  <li style={{display: `inline-block`, marginRight: `1rem`, fontFamily: "Libre Caslon Text"}}>
     <Link to={props.to}>{props.children}</Link>
   </li>
 )
@@ -20,6 +20,13 @@ const Layout = ({ location, title, children }) => {
   let header
 
   if (isRootPath) {
+    header = (
+      <h1 className="main-heading">
+        Hello!
+      </h1>
+    )
+  }
+  else if (/\/hp2\/?$/.test(location.pathname)) {
     header = (
       <h1 className="main-heading">
         Hello!
