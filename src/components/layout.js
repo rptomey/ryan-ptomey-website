@@ -66,8 +66,8 @@ const Layout = ({ location, title, children }) => {
       </ul>
       </header>
       <main>{children}</main>
-      <nav className="sidenav" onClick={toggleChange}>
-        <div className="mobile-hamburger-container">
+      <nav className="sidenav">
+        <div className="mobile-hamburger-container" onClick={toggleChange}>
           <div className="mobile-hamburger-bar1"/>
           <div className="mobile-hamburger-bar2"/>
           <div className="mobile-hamburger-bar3"/>
