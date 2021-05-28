@@ -239,6 +239,7 @@ a:focus {
 }
 
 /* Layout elements */
+/*
 nav.sidenav {
   height: 100%;
   width: 20%;
@@ -296,6 +297,7 @@ footer.global-footer {
   height: 2.5rem;
   padding: .5rem;
 }
+*/
 
 /* Custom classes */
 
@@ -380,6 +382,358 @@ footer.global-footer {
 
 /* Media queries */
 
+/* Mobile first styling */
+nav.sidenav.expanded {
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  padding-top: 1rem;
+  padding-bottom: 2.5rem;
+  padding-left: 2rem;
+  padding-right: 1rem;
+  overflow-x: hidden;
+  display: block;
+  background-color: #0c4c93;
+}
+
+nav.sidenav.expanded a {
+  color: #ffffff;
+  display: block;
+}
+
+nav.sidenav.expanded .mobile-only-sidenav-links {
+  display: block;
+}
+
+nav.sidenav {
+  height: 100%;
+  width: 10%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  padding-top: 1rem;
+  padding-bottom: 2.5rem;
+  padding-left: 2rem;
+  padding-right: 1rem;
+  overflow-x: hidden;
+  display: block;
+  background-color: #0c4c93;
+}
+
+nav.sidenav a {
+  color: #ffffff;
+  display: none;
+}
+
+nav.sidenav .mobile-only-sidenav-links {
+  display: none;
+}
+
+.mobile-hamburger-container {
+  display: block;
+  cursor: pointer;
+  position: fixed;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  padding-top: 1rem;
+  padding-left: .5rem;
+}
+
+.mobile-hamburger-bar1, .mobile-hamburger-bar2, .mobile-hamburger-bar3 {
+  width: 2rem;
+  height: .1rem;
+  background-color: darkgrey;
+  margin: .4rem 0;
+  transition: 0.4s;
+}
+
+.expanded .mobile-hamburger-bar1 {
+  -webkit-transform: rotate(-45deg) translate(-.35rem, .35rem);
+  transform: rotate(-45deg) translate(-.35rem, .35rem);
+}
+
+.expanded .mobile-hamburger-bar2 {
+  opacity: 0;
+}
+
+.expanded .mobile-hamburger-bar3 {
+  -webkit-transform: rotate(45deg) translate(-.35rem, -.35rem);
+  transform: rotate(45deg) translate(-.35rem, -.35rem);
+}
+
+header.global-header {
+  left: 10%;
+  top: 0;
+  padding-left: 1.5rem;
+  padding-top: 1rem;
+  position: absolute;
+  width: 80%;
+  height: 12%;
+}
+
+header.global-header ul {
+  display: none;
+}
+
+main {
+  left: 10%;
+  top: 12%;
+  position: absolute;
+  padding-top: 1rem;
+  padding-left: 2rem;
+  padding-right: 1rem;
+  padding-bottom: 2.5rem;
+}
+
+.hp-featured-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 1rem;
+}
+
+.hp-featured-box {
+  border: thin solid #0c4c93;
+  padding: 0rem 1rem;
+}
+
+footer.global-footer {
+  background-color: lightblue;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  z-index: 2;
+  width: 100%;
+  height: 2.5rem;
+  padding: .5rem;
+}
+
+/* Tablet-sized devices */
+@media (min-width: 43rem) {
+  nav.sidenav.expanded {
+    height: 100%;
+    width: 20%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    padding-top: 1rem;
+    padding-bottom: 2.5rem;
+    padding-left: 2rem;
+    padding-right: 1rem;
+    overflow-x: hidden;
+    display: block;
+    background-color: #0c4c93;
+  }
+
+  nav.sidenav.expanded a {
+    color: #ffffff;
+    display: block;
+  }
+
+  nav.sidenav.expanded .mobile-only-sidenav-links {
+    display: none;
+  }
+
+  nav.sidenav {
+    height: 100%;
+    width: 20%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    padding-top: 1rem;
+    padding-bottom: 2.5rem;
+    padding-left: 2rem;
+    padding-right: 1rem;
+    overflow-x: hidden;
+    display: block;
+    background-color: #0c4c93;
+  }
+
+  nav.sidenav a {
+    color: #ffffff;
+    display: block;
+  }
+
+  nav.sidenav .mobile-only-sidenav-links {
+    display: none;
+  }
+
+  .mobile-hamburger-container {
+    display: none;
+  }
+
+  header.global-header {
+    left: 20%;
+    top: 0;
+    padding-left: 1.5rem;
+    padding-top: 1rem;
+    position: absolute;
+    width: 80%;
+    height: 12%;
+  }
+
+  header.global-header ul {
+    top: 0;
+    position: absolute;
+    padding-top: 1rem;
+    padding-right: 1.5rem;
+    right: 0;
+    display: block;
+  }
+
+  main {
+    left: 20%;
+    top: 12%;
+    position: absolute;
+    padding-top: 1rem;
+    padding-left: 2rem;
+    padding-right: 1rem;
+    padding-bottom: 2.5rem;
+  }
+
+  footer.global-footer {
+    background-color: lightblue;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    z-index: 2;
+    width: 100%;
+    height: 2.5rem;
+    padding: .5rem;
+  }
+
+  .hp-featured-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 1rem;
+  }
+
+  .hp-featured-box {
+    border: thin solid #0c4c93;
+    padding: 1rem;
+  }
+}
+
+/* Desktop screens */
+@media (min-width: 62rem) {
+  nav.sidenav.expanded {
+    height: 100%;
+    width: 20%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    padding-top: 1rem;
+    padding-bottom: 2.5rem;
+    padding-left: 2rem;
+    padding-right: 1rem;
+    overflow-x: hidden;
+    display: block;
+    background-color: #0c4c93;
+  }
+
+  nav.sidenav.expanded a {
+    color: #ffffff;
+    display: block;
+  }
+
+  nav.sidenav.expanded .mobile-only-sidenav-links {
+    display: none;
+  }
+  
+  nav.sidenav {
+    height: 100%;
+    width: 20%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    padding-top: 1rem;
+    padding-bottom: 2.5rem;
+    padding-left: 2rem;
+    padding-right: 1rem;
+    overflow-x: hidden;
+    display: block;
+    background-color: #0c4c93;
+  }
+
+  nav.sidenav a {
+    color: #ffffff;
+    display: block;
+  }
+
+  nav.sidenav .mobile-only-sidenav-links {
+    display: none;
+  }
+
+  .mobile-hamburger-container {
+    display: none;
+  }
+
+  header.global-header {
+    left: 20%;
+    top: 0;
+    padding-left: 1.5rem;
+    padding-top: 1rem;
+    position: absolute;
+    width: 80%;
+    height: 12%;
+  }
+
+  header.global-header ul {
+    top: 0;
+    position: absolute;
+    padding-top: 1rem;
+    padding-right: 1.5rem;
+    right: 0;
+    display: block;
+  }
+
+  main {
+    left: 20%;
+    top: 12%;
+    position: absolute;
+    padding-top: 1rem;
+    padding-left: 2rem;
+    padding-right: 1rem;
+    padding-bottom: 2.5rem;
+  }
+
+  footer.global-footer {
+    background-color: lightblue;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    z-index: 2;
+    width: 100%;
+    height: 2.5rem;
+    padding: .5rem;
+  }
+
+  .hp-featured-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 1rem;
+  }
+
+  .hp-featured-box {
+    border: thin solid #0c4c93;
+    padding: 1rem;
+  }
+}
+
+/* If I ever want to support larger desktop screens, use this.
+@media (min-width: 82rem) {
+
+}
+*/
+
 @media (max-width: 42rem) {
   blockquote {
     padding: var(--spacing-0) var(--spacing-0) var(--spacing-0) var(--spacing-4);
@@ -392,30 +746,7 @@ footer.global-footer {
 }
 
 /* Grid testing */
-.global-grid-wrapper {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  grid-template-rows: 1fr;
-  column-gap: 1rem;
-  height: 100vw;
-}
-
-.main-content-wrapper {
-  grid-column-start: 2;
-  grid-column-end: 6;
-}
-
-.grid-sidenav {
-  grid-column-start: 1 / 1;
-  grid-row: 1 / -1;
-  padding-top: 1rem;
-  padding-bottom: 2.5rem;
-  padding-left: 2rem;
-  padding-right: 1rem;
-  overflow-x: hidden;
-  background-color: #0c4c93;
-}
-
+/*
 .hp-featured-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -426,3 +757,4 @@ footer.global-footer {
   border: thin solid #0c4c93;
   padding: 1rem;
 }
+*/

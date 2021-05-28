@@ -50,6 +50,11 @@ const Layout = ({ location, title, children }) => {
   }
   */
 
+  function toggleChange() {
+    document.querySelector('.mobile-hamburger-container').classList.toggle("expanded");
+    document.querySelector('nav.sidenav').classList.toggle("expanded");
+  }
+
   return (
     <div className="global-wrapper" data-is-root-path={isRootPath}>
       <header className="global-header">
@@ -61,7 +66,12 @@ const Layout = ({ location, title, children }) => {
       </ul>
       </header>
       <main>{children}</main>
-      <nav class="sidenav">
+      <nav className="sidenav" onClick={toggleChange}>
+        <div className="mobile-hamburger-container">
+          <div className="mobile-hamburger-bar1"/>
+          <div className="mobile-hamburger-bar2"/>
+          <div className="mobile-hamburger-bar3"/>
+        </div>
         <Link to="/">
           <StaticImage
             className="about-picture"
@@ -74,6 +84,10 @@ const Layout = ({ location, title, children }) => {
         </Link>
         <ul style={{ listStyle: `none`}}>
           <SideLink to="/">Home</SideLink>
+          <div className="mobile-only-sidenav-links">
+            <SideLink to="/blog/">Blog</SideLink>
+            <SideLink to="/portfolio/">Portfolio</SideLink>
+          </div>
           <SideLink to="/resources/">Resources</SideLink>
           <SideLink to="/about/">About</SideLink>
         </ul>
