@@ -13,11 +13,10 @@ export default function About({ data, location}) {
       <Bio />
       <StaticImage
         className="about-picture"
-        layout="fixed"
+        layout="constrained"
         formats={["AUTO", "WEBP", "AVIF"]}
         src="../images/ryan-and-olivia-at-disney.png"
-        width={750}
-        height={1000}
+        width={500}
         quality={95}
         alt="Me holding my oldest daughter at Disney."
       />
