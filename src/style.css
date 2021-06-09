@@ -383,6 +383,11 @@ footer.global-footer {
 /* Media queries */
 
 /* Mobile first styling */
+pre {
+  width: 25rem;
+  overflow-x: auto;
+}
+
 nav.sidenav.expanded {
   height: 100%;
   width: 100%;
@@ -514,6 +519,11 @@ footer.global-footer {
 
 /* Tablet-sized devices */
 @media (min-width: 43rem) {
+  pre {
+    width: 35rem;
+    overflow-x: auto;
+  }
+
   nav.sidenav.expanded {
     height: 100%;
     width: 20%;
@@ -622,6 +632,11 @@ footer.global-footer {
 
 /* Desktop screens */
 @media (min-width: 62rem) {
+  pre {
+    width: 46rem;
+    overflow-x: auto;
+  }
+
   nav.sidenav.expanded {
     height: 100%;
     width: 20%;
@@ -728,11 +743,20 @@ footer.global-footer {
   }
 }
 
-/* If I ever want to support larger desktop screens, use this.
+/* Bigger desktop screens */
 @media (min-width: 82rem) {
-
+  pre {
+    width: 62rem;
+    overflow-x: auto;
+  }
 }
-*/
+
+@media (min-width: 100rem) {
+  pre {
+    width: 76rem;
+    overflow-x: auto;
+  }
+}
 
 @media (max-width: 42rem) {
   blockquote {
