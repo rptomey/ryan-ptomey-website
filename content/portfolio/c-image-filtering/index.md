@@ -227,28 +227,28 @@ With all that said, here are the results of each filter...
 
 ### Grayscale Filter
 Before:
-![Harvard stadium unaltered image](./stadium.bmp)
+![Harvard stadium unaltered image](./stadium.png)
 
 After:
-![Harvard stadium image in grayscale](./graystadium.bmp)
+![Harvard stadium image in grayscale](./graystadium.png)
 
 ### Reflection Filter
 Before:
-![Harvard tower unaltered image](./tower.bmp)
+![Harvard tower unaltered image](./tower.png)
 
 After:
-![Harvard tower flipped on horizontal axis](./reflectedtower.bmp)
+![Harvard tower flipped on horizontal axis](./reflectedtower.png)
 
 ### Blur Filter
 Before:
-![Harvard yard unaltered image](./yard.bmp)
+![Harvard yard unaltered image](./yard.png)
 
 After:
-![Harvard yard image softened by blur](./blurredyard.bmp)
+![Harvard yard image softened by blur](./blurredyard.png)
 
 ### Edge Filter
 Before:
-![Harvard courtyard unaltered image](./courtyard.bmp)
+![Harvard courtyard unaltered image](./courtyard.png)
 
 After:
-![Harvard courtyard image with edges emphasized](./edgedcourtyard.bmp)
+![Harvard courtyard image with edges emphasized](./edgedcourtyard.png)
