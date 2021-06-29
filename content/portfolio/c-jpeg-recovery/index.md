@@ -1,6 +1,6 @@
 ---
 title: cs50x Coursework - Recovering JPEG Files in C
-date: "2021-06-01"
+date: "2021-06-14"
 description: "Code written in C to recover JPEG files from a raw file."
 ---
 ## Project Abstract
