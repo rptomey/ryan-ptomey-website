@@ -27,12 +27,6 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
 
 exports.createPages = async ({ graphql, actions, reporter }) => {
   const { createPage } = actions
-  const { createRedirect } = actions
-
-  createRedirect({
-    fromPath: `https://ryan.ptomey.net/`,
-    toPath: `https://ryanptomey.com/`
-  })
 
   // Define template for blog posts and portfolio pages
   const blogPostTemplate = path.resolve(`./src/templates/blog-post.js`)
